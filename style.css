@@ -1,0 +1,122 @@
+/* CSS for project */
+
+@import url("https://fonts.googleapis.com/css?family=Ubuntu"); 
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  background: #fff9e2;
+  text-align: center;
+  color: #3b1010;
+}
+
+h1 {
+  font-size: 4.8rem;
+  line-height: 1.2;
+  margin: 2rem 0 0 0;
+  color: #ff624a;
+  text-shadow: 2px 2px 0 rgba(59, 16, 16, 0.2);
+}
+
+h2 {
+  font-size: 3.2rem;
+  color: #3b1010;
+  margin: 2rem;
+  font-weight: 600;
+}
+
+.score {
+  display: inline-block;
+  background: #ffe5cf;
+  padding: 0.6rem 3rem;
+  border-radius: 1.5rem;
+  color: #3b1010;
+  font-size: 2.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(59, 16, 16, 0.15);
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+  border-radius: 1.5rem;
+  background: #fff3d9;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(59, 16, 16, 0.15);
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url("images/dirt.svg")
+    bottom center no-repeat;
+  background-size: contain;
+  content: "";
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url("images/mole.svg")
+    bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.hole.up .mole {
+  top: 0;
+  transform: scale(1.05);
+}
+
+#start {
+  font-family: "Ubuntu", sans-serif;
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+  background: #3b1010;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.2rem 2.5rem;
+  cursor: pointer;
+  margin: 2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(59, 16, 16, 0.25);
+  transition: all 0.3s ease;
+}
+
+#start:hover {
+  background: #552020;
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+
+
+ 
