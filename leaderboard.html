@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leaderboard - WhackEm</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Page layout only (keeps visual styles in style.css) */
+    body { padding: 2rem; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .card { border-radius: 1rem; padding: 1.5rem; text-align: left; }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body class="leaderboard-bg">
+  <h1> ::: Leaderboard :::</h1>
+
+  <div id="toast" class="toast"></div>
+
+  <div class="top-bar">
+    <button class="btn back" onclick="window.location.href='index.html'">← Back to Game</button>
+    <button class="btn clear" id="clearAll">Clear All Scores</button>
+  </div>
+
+  <div class="container">
+    <section class="card">
+      <h2>The Top 10</h2>
+
+      <form id="addForm">
+        <input id="nameInput" type="text" placeholder="Player name" required />
+        <input id="scoreInput" type="number" min="0" placeholder="Score" required />
+        <button class="btn add" type="submit">Add Score</button>
+      </form>
+
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Score</th>
+              <th>Time</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
