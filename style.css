@@ -210,6 +210,21 @@ input[type="number"] {
   table { font-size: 1.3rem; }
 }
 
+/* Tablet View */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .game {
+    width: 85%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    padding: 15px;
+    border-width: 8px;
+  }
+
+  table {
+    font-size: 1.4rem;
+  }
+}
+
 /* Leaderboard page background (scoped) */
 body.leaderboard-bg {
   background: url("images/leaderboardBg.png") no-repeat center center fixed;
